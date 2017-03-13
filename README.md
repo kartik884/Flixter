@@ -40,7 +40,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-[Link to video walkthrough](https://sendvid.com/3dgcecl4)
+[Link to video walkthrough](http://sendvid.com/e4764iav)
 
 GIF created with SendItVideo.
 
