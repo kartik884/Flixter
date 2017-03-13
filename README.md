@@ -1,9 +1,9 @@
-# Flixter
-# Project 1 - *Name of App Here*
 
-**Name of your app** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
+# Project 1 - *Flixter*
 
-Time spent: **X** hours spent in total
+**Flixter** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
+
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -40,7 +40,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-[linkname](https://sendvid.com/3dgcecl4)
+[Link to video walkthrough](https://sendvid.com/3dgcecl4)
 
 GIF created with SendItVideo.
 
