@@ -1,8 +1,11 @@
 package com.knyamagoudar.flixter;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.knyamagoudar.flixter.adapters.MovieArrayAdapter;
@@ -18,7 +21,7 @@ import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
 
-public class MovieActivity extends AppCompatActivity {
+public class MovieActivity extends Activity {
 
     ArrayList<Movie> movies;
     MovieArrayAdapter movieAdapter;
@@ -52,6 +55,16 @@ public class MovieActivity extends AppCompatActivity {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 super.onFailure(statusCode, headers, responseString, throwable);
+            }
+        });
+
+        this.lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Movie movie = (Movie) adapterView.getItemAtPosition(position);
+                Intent intent = new Intent(MovieActivity.this, MovieDetailActivity.class);
+                intent.putExtra("movie",movie);
+                startActivity(intent);
             }
         });
     }
