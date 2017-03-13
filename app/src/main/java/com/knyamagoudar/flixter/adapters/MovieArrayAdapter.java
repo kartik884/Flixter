@@ -86,10 +86,12 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
 
             orientation = v.getResources().getConfiguration().orientation;
             if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-                Picasso.with(getContext()).load(movie.getPosterPath()).into(viewHolder.posterImage);
+                Picasso.with(getContext()).load(movie.getPosterPath())
+                        .placeholder(R.drawable.placeholder).into(viewHolder.posterImage);
 
             } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                Picasso.with(getContext()).load(movie.getBackDropPath()).into(viewHolder.posterImage);
+                Picasso.with(getContext()).load(movie.getBackDropPath())
+                        .placeholder(R.drawable.placeholder).into(viewHolder.posterImage);
             }
 
             return v;
@@ -116,9 +118,11 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
             }
             orientation = v.getResources().getConfiguration().orientation;
             if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-                Picasso.with(getContext()).load(movie.getFullImage()).into(hitViewHolder.hitMovieImage);
+                Picasso.with(getContext()).load(movie.getFullImage())
+                        .placeholder(R.drawable.placeholder).into(hitViewHolder.hitMovieImage);
             } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                Picasso.with(getContext()).load(movie.getFullImage()).into(hitViewHolder.hitMovieImage);
+                Picasso.with(getContext()).load(movie.getFullImage())
+                        .placeholder(R.drawable.placeholder).into(hitViewHolder.hitMovieImage);
             }
 
             return v;
